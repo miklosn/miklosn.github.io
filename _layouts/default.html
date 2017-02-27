@@ -1,0 +1,188 @@
+<html>
+	<head>
+		<style>
+
+		@import url('https://fonts.googleapis.com/css?family=VT323&subset=latin-ext');
+		@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono&subset=latin-ext');
+
+		body
+		{
+			margin: 0;
+			padding: 0;
+			background-color: #58595b;
+			font-family: 'Droid Sans Mono';
+		}
+
+		h1
+		{
+			margin: 0;
+			font-family: 'VT323', monospace;
+			font-size: 10vmin;
+			text-transform: uppercase;
+		}
+
+		h2
+		{
+			margin: 0;
+			padding-bottom: 2vmin;
+			font-size: 3.2vmin;
+			color: #272b2e;
+			text-transform: lowercase;
+		}
+
+		address
+		{
+			font-style: normal;
+		}
+
+		a[href^="mailto:"], a[href^="tel:"]
+		{
+			color: white;
+			text-decoration: none;
+		}
+
+		/* good old stuff for browsing on a the desktop computer :) */
+		a[href^="mailto:"]:hover
+		{
+			color: #31a499;
+		}
+
+		hr
+		{
+			height: 2px;
+			border: none;
+			background-color: #454648;
+		}
+
+		#wrapper
+		{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			background-color: #58595b;
+			color: white;
+		}
+
+		#upperCorner
+		{
+			position: absolute;
+			width: 200px;
+			height: 30px;
+			padding-top: 100px;
+			padding-left: 50px;
+			top: -90;
+			left: -90;
+			z-index: 10;
+			transform: rotate(-45deg);
+
+			background-color: #31a499;
+			color: white;
+			opacity: 0.5;
+		}
+
+		#container
+		{
+			/*DEBUG:*/
+			/*background-color: orange;*/
+
+			margin: 0 auto;
+			width: 80%;
+			overflow: auto;
+		}
+
+		#content
+		{
+			/*DEBUG:*/
+			/*background-color: red;*/
+
+			float: left;
+
+			min-width: 320px;
+			max-width: 768px;
+
+			font-size: 2.8vmin;
+		}
+
+		#headerDesign
+		{
+			/*DEBUG:*/
+			/*background-color: green;*/
+
+			float: left;
+
+			width: 320px;
+			min-width: 320px;
+			max-width: 560px;
+		}
+
+		#headerDesign img
+		{
+			align: center;
+			margin: 2rem;
+			width: 100%;
+			max-width: 500px;
+		}
+
+		#underContentDesign
+		{
+			/*DEBUG:*/
+			/*background-color: blue;*/
+
+			float: left;
+			width: 100%;
+
+			font-family: "Courier New", Courier, monospace;
+			color: #454648;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="upperCorner">
+				HU_v0.1
+			</div>
+			<div id="container">
+				<div id="content">
+					<h1>Cray_Hungary_Ltd.</h1>
+					<h2>We_are_coding_your_future_even_now</h2>
+					<div>
+						EMAIL&nbsp;&nbsp;&nbsp;&nbsp;= <a href="mailto:example@info@cray.hu">info@cray.hu</a><br />
+						PHONE&nbsp;&nbsp;&nbsp;&nbsp;= <a href="tel:+36-30-5555-555">+36-30-5555-555</a>
+						<address>ADDRESS&nbsp;&nbsp;= 2112 Veresegyhaz, Szankozo utca 2.</address>
+						GIRO_HUF&nbsp;= 12010453-01498997-00100000
+					</div>
+				</div>
+				<div id="headerDesign">
+					<img src="/images/hacker.png" />
+				</div>
+				<div id="underContentDesign">
+<pre>
+&lt;root@rotarysaw&gt; invalid  operand: 0000
+kernel 2.4.9.e3smp
+CPu : 0
+EIP : 0010 : [<C01137720>] Tainted : P
+EFLAGS : 00010092
+EIP is at kmem_cache_reap[kernel] 0x1f8
+eax : 0000001e ebx : f3dee280 ecx : C02f1244 edx : 00005750
+esi : C32260a0 edi : C32260b0 ebp : 00000000 esp: f7853f7c
+ds: 0018 es : 0018 SS : 0018
+Process kswapd (pid : 6, stackpage = f7f53000)
+Stack :
+Call Trace:
+ [<C02626ca>].rodata.strl.l [kernel] 0x2b25
+ [<c013aaa6>] do_try_free_page [kernel] 0x46
+ [<c013abb3>] kswapd [kernel] 0x103
+ [<c0105000>] stext [kernel] 0x0
+ [<c0105000>] stext [kernel] 0x0
+ [<c0105826>] kernel_threat [kernel] 0x26
+ [<c013aaab0>] kswapd [kernel] 0x0
+Code: 0f 0b 58 5a 8b 03 45 39 88 75 dd 8b 4c 2c 89 ea 8b 7c 4c a3
+kernel panic : not continuing
+</pre>
+				<hr />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
